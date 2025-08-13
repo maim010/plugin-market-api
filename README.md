@@ -37,11 +37,14 @@ GET /health
 
 ### 本地运行
 ```bash
+# 创建虚拟环境
+uv venv
+
 # 安装依赖
-pip install -r requirements.txt
+uv pip install -r requirements.txt -i https://mirrors.aliyun.com/pypi/simple
 
 # 启动服务
-python main.py
+uv run python main.py
 ```
 
 服务将在 `http://localhost:8080` 启动。
